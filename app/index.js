@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Connect to MongoDB
-mongoose.connect('mongodb://mongo:27017/app',
+mongoose.connect('',
   // mongo config when working with docker
   { useNewUrlParser: true }
 )
@@ -37,7 +37,7 @@ app.post('/item/add', (req, res) => {
   newItem.save().then(item => res.redirect('/'));
 });
 
-const port = 3000
+const port = ''
 
 // which port is the node server listening on?
 
